@@ -17,4 +17,12 @@ module.exports = {
     ],
     additionalSitemaps: [`${SITE_URL}/pages-sitemap.xml`, `${SITE_URL}/posts-sitemap.xml`],
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: process.env.NEXT_PUBLIC_VERCEL_URL || 'payload-next-one.vercel.app',
+      },
+    ],
+  },
 }
